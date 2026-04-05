@@ -753,8 +753,6 @@ img { display: block; width: 100%; }
   .featured__card-left { border-right: none; border-bottom: var(--border); }
   .featured__card-right { min-height: 280px; }
   .projects__grid { grid-template-columns: repeat(2, 1fr); }
-  .project-card:nth-child(2n) { border-right: none; }
-  .project-card:nth-child(n+3) { border-top: var(--border); }
   .about__inner { grid-template-columns: 1fr; gap: 40px; }
   .contact__inner { grid-template-columns: 1fr; gap: 40px; }
 }
@@ -762,6 +760,10 @@ img { display: block; width: 100%; }
 @media (max-width: 860px) {
   .hero__grid { grid-template-columns: 1fr; }
   .hero__visual { display: none; }
+  .projects__grid { grid-template-columns: 1fr; }
+  .pcard { border-right: none !important; }
+  .pcard:nth-last-child(-n+2) { border-bottom: var(--border-heavy); }
+  .pcard:last-child { border-bottom: none; }
 }
 
 @media (max-width: 768px) {
