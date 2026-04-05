@@ -44,47 +44,86 @@
   <section class="hero" id="hero" aria-label="Hero">
     <div class="hero__noise" aria-hidden="true"></div>
     <div class="container">
-      <div class="hero__eyebrow">
-        <span class="hero__status-dot"></span>
-        <span>ECE Student · VIT Chennai · Open to Internships</span>
-      </div>
-      <h1 class="hero__headline">Hello.<br>I'm <span class="hero__name">Ansh Verma</span></h1>
-      <p class="hero__role">RISC-V &nbsp;|&nbsp; VLSI &nbsp;|&nbsp; AI Hardware Engineer</p>
-      <p class="hero__sub">Designing processors, building AI systems on hardware,<br class="br-desk"> and working on embedded solutions.</p>
-      <div class="hero__actions">
-        <a href="#projects" class="btn btn--primary" id="hero-cta-projects">View Projects ↓</a>
-        <a href="#" class="btn btn--outline" id="hero-cta-resume">Download Resume ↗</a>
-      </div>
-      <div class="hero__stats">
-        <div class="hero__stat"><span class="hero__stat-n" data-count="5">0</span><span class="hero__stat-l">Projects</span></div>
-        <div class="hero__stat"><span class="hero__stat-n">8.12</span><span class="hero__stat-l">CGPA</span></div>
-        <div class="hero__stat"><span class="hero__stat-n" data-count="3">0</span><span class="hero__stat-l">ISAs Studied</span></div>
-        <div class="hero__stat"><span class="hero__stat-n" data-count="2">0</span><span class="hero__stat-l">Certs</span></div>
-      </div>
-    </div>
+      <div class="hero__grid">
+
+        <!-- LEFT: TEXT -->
+        <div class="hero__text">
+          <div class="hero__eyebrow hero-anim hero-anim--1">
+            <span class="hero__status-dot"></span>
+            <span>ECE Student &middot; VIT Chennai &middot; Open to Internships</span>
+          </div>
+          <h1 class="hero__headline hero-anim hero-anim--2">
+            Hello.<br>I'm <span class="hero__name">Ansh<br>Verma</span>
+          </h1>
+          <p class="hero__role hero-anim hero-anim--3">
+            RISC-V &nbsp;|&nbsp; VLSI &nbsp;|&nbsp; AI Hardware Engineer
+          </p>
+          <p class="hero__sub hero-anim hero-anim--4">
+            I design and implement hardware systems —<br class="br-desk">
+            processors, AI accelerators, and embedded solutions.
+          </p>
+          <div class="hero__actions hero-anim hero-anim--5">
+            <a href="#projects" class="btn btn--primary" id="hero-cta-projects">View My Work ↓</a>
+            <a href="#" class="btn btn--outline" id="hero-cta-resume">Download Resume ↗</a>
+          </div>
+          <div class="hero__stats hero-anim hero-anim--6">
+            <div class="hero__stat"><span class="hero__stat-n" data-count="5">0</span><span class="hero__stat-l">Projects</span></div>
+            <div class="hero__stat"><span class="hero__stat-n">8.12</span><span class="hero__stat-l">CGPA</span></div>
+            <div class="hero__stat"><span class="hero__stat-n" data-count="12">0</span><span class="hero__stat-l">k Lines RTL</span></div>
+            <div class="hero__stat"><span class="hero__stat-n" data-count="2">0</span><span class="hero__stat-l">Certs</span></div>
+          </div>
+        </div>
+
+        <!-- RIGHT: RETRO HARDWARE ILLUSTRATION -->
+        <div class="hero__visual hero-anim hero-anim--3" aria-hidden="true">
+          <!-- Retro monitor -->
+          <div class="retro-monitor">
+            <div class="retro-monitor__bezel">
+              <div class="retro-monitor__screen">
+                <div class="retro-monitor__scanlines"></div>
+                <div class="retro-monitor__content" id="hero-terminal"></div>
+                <span class="retro-cursor" id="hero-cursor">█</span>
+              </div>
+            </div>
+            <div class="retro-monitor__neck"></div>
+            <div class="retro-monitor__stand"></div>
+          </div>
+          <!-- Floating IC chips -->
+          <div class="hero__chip hero__chip--1">
+            <div class="chip__pin chip__pin--left"><span></span><span></span><span></span></div>
+            <div class="chip__body">RV32I<br><small>CORE</small></div>
+            <div class="chip__pin chip__pin--right"><span></span><span></span><span></span></div>
+          </div>
+          <div class="hero__chip hero__chip--2">
+            <div class="chip__pin chip__pin--left"><span></span><span></span></div>
+            <div class="chip__body">ALU<br><small>32-BIT</small></div>
+            <div class="chip__pin chip__pin--right"><span></span><span></span></div>
+          </div>
+          <div class="hero__chip hero__chip--3">
+            <div class="chip__pin chip__pin--left"><span></span><span></span><span></span><span></span></div>
+            <div class="chip__body">GNN<br><small>POWER</small></div>
+            <div class="chip__pin chip__pin--right"><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+
+      </div><!-- /.hero__grid -->
+    </div><!-- /.container -->
     <div class="hero__ticker" aria-hidden="true">
       <div class="hero__ticker-inner">
-        <span>RISC-V RV32I</span><span>·</span>
-        <span>Verilog RTL</span><span>·</span>
-        <span>FPGA Synthesis</span><span>·</span>
-        <span>CNN Hardware</span><span>·</span>
-        <span>GNN Power Prediction</span><span>·</span>
-        <span>Embedded C</span><span>·</span>
-        <span>Xilinx Vivado</span><span>·</span>
-        <span>PyTorch</span><span>·</span>
-        <span>SystemVerilog</span><span>·</span>
-        <span>RISC-V RV32I</span><span>·</span>
-        <span>Verilog RTL</span><span>·</span>
-        <span>FPGA Synthesis</span><span>·</span>
-        <span>CNN Hardware</span><span>·</span>
-        <span>GNN Power Prediction</span><span>·</span>
-        <span>Embedded C</span><span>·</span>
-        <span>Xilinx Vivado</span><span>·</span>
-        <span>PyTorch</span><span>·</span>
-        <span>SystemVerilog</span><span>·</span>
+        <span>RISC-V RV32I</span><span>·</span><span>Verilog RTL</span><span>·</span>
+        <span>FPGA Synthesis</span><span>·</span><span>CNN Hardware</span><span>·</span>
+        <span>GNN Power Prediction</span><span>·</span><span>Embedded C</span><span>·</span>
+        <span>Xilinx Vivado</span><span>·</span><span>PyTorch</span><span>·</span>
+        <span>SystemVerilog</span><span>·</span><span>VLSI Design</span><span>·</span>
+        <span>RISC-V RV32I</span><span>·</span><span>Verilog RTL</span><span>·</span>
+        <span>FPGA Synthesis</span><span>·</span><span>CNN Hardware</span><span>·</span>
+        <span>GNN Power Prediction</span><span>·</span><span>Embedded C</span><span>·</span>
+        <span>Xilinx Vivado</span><span>·</span><span>PyTorch</span><span>·</span>
+        <span>SystemVerilog</span><span>·</span><span>VLSI Design</span><span>·</span>
       </div>
     </div>
   </section>
+
 
   <!-- ══ ABOUT ═══════════════════════════════════════════════ -->
   <section class="about" id="about" aria-label="About">
