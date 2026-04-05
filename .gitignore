@@ -9,3 +9,6 @@ desktop.ini
 
 # Python server
 __pycache__/
+
+# Node
+node_modules/

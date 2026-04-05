@@ -1,0 +1,10 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Ansh Verma's portfolio website",
+  "scripts": {
+    "dev": "pwsh -ExecutionPolicy Bypass -File watch-and-push.ps1",
+    "preview": "npx browser-sync start --server --port 3000 --files \"*.html,*.css,*.js\" --no-notify"
+  },
+  "private": true
+}
