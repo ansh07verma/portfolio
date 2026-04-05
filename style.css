@@ -504,16 +504,63 @@ img { display: block; width: 100%; }
 .projects { padding: 96px 0; border-bottom: var(--border-heavy); }
 .projects__header {
   display: flex; align-items: flex-end;
-  justify-content: space-between; margin-bottom: 56px;
+  justify-content: space-between; margin-bottom: 48px;
   flex-wrap: wrap; gap: 16px;
 }
 .projects__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  border: var(--border-heavy);
-  box-shadow: var(--shadow-lg);
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  border: var(--border);
 }
+
+.project-card {
+  border-right: var(--border); display: flex; flex-direction: column;
+  background: var(--surface);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.12s ease;
+}
+.project-card:nth-child(2n) { border-right: none; }
+.project-card:nth-child(n+3) { border-top: var(--border); }
+.project-card:hover {
+  background: var(--surface-2);
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow);
+  z-index: 1;
+}
+
+.project-card__bar {
+  background: var(--surface-3); border-bottom: var(--border);
+  padding: 8px 14px; display: flex; align-items: center; gap: 6px;
+}
+.wdot { width: 9px; height: 9px; border-radius: 50%; border: var(--border); display: inline-block; }
+.wname { font-family: var(--font-m); font-size: 0.6rem; color: var(--ink-muted); margin-left: 4px; }
+
+.project-card__vis {
+  border-bottom: var(--border); height: 180px;
+  background: var(--surface-3); overflow: hidden;
+}
+.project-card__vis svg { width: 100%; height: 100%; }
+
+.project-card__body { padding: 22px; flex: 1; display: flex; flex-direction: column; }
+.project-card__tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+.project-card__title {
+  font-family: var(--font-d); font-size: 1.15rem; font-weight: 700;
+  letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.25;
+}
+.project-card__desc {
+  font-size: 0.875rem; color: var(--ink-muted); line-height: 1.7; flex: 1; margin-bottom: 20px;
+}
+.project-card__footer { display: flex; gap: 8px; border-top: var(--border); padding-top: 16px; }
+
+.card-btn {
+  font-family: var(--font-m); font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 8px 14px; border: var(--border);
+  cursor: pointer; transition: var(--ease); background: transparent; color: var(--ink);
+}
+.card-btn--filled { background: var(--ink); color: var(--surface); }
+.card-btn:hover { background: var(--ink); color: var(--surface); box-shadow: var(--shadow); transform: translate(-2px,-2px); }
+.card-btn--filled:hover { background: var(--surface-2); color: var(--ink); }
+
+
 
 /* ── Project Card (pcard) ──────────────────────────────── */
 .pcard {
