@@ -90,7 +90,53 @@
   }, { passive: true });
 })();
 
-/* ── 6. CARD HOVER 3D TILT ─────────────────────────────────── */
+/* ── 6. RETRO HERO TERMINAL ─────────────────────────────────── */
+(function () {
+  const screen = document.getElementById('hero-terminal');
+  const cursor = document.getElementById('hero-cursor');
+  if (!screen) return;
+
+  const lines = [
+    '> whoami',
+    'ansh_verma@vit:~',
+    '',
+    '> cat specialization.txt',
+    '[ RISC-V RV32I Processor Design ]',
+    '[ VLSI / RTL in Verilog        ]',
+    '[ AI Hardware Accelerators     ]',
+    '[ Embedded Systems (TM4C123)   ]',
+    '',
+    '> ./status.sh',
+    '● Open to Summer 2026 Internships',
+    '● CGPA: 8.12 / 10.00',
+    '● Chennai, India',
+    '',
+    '> _',
+  ];
+
+  let lineIdx = 0, charIdx = 0;
+  let delay = 800; // initial pause
+
+  function nextChar() {
+    if (lineIdx >= lines.length) { return; }
+    const line = lines[lineIdx];
+
+    if (charIdx < line.length) {
+      screen.textContent += line[charIdx];
+      charIdx++;
+      setTimeout(nextChar, line.startsWith('>') ? 55 : 18);
+    } else {
+      screen.textContent += '\n';
+      lineIdx++;
+      charIdx = 0;
+      const pause = lines[lineIdx - 1].startsWith('>') ? 120 : 28;
+      setTimeout(nextChar, pause);
+    }
+  }
+
+  setTimeout(nextChar, delay);
+})();
+
 (function () {
   document.querySelectorAll('.project-card, .blog-card').forEach(card => {
     card.addEventListener('mousemove', e => {
