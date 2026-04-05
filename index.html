@@ -262,6 +262,222 @@
       <div class="projects__grid stagger">
 
         <!-- ── 1. RV32I RISC-V Processor ─────────────────── -->
+        <article class="project-card" aria-label="RV32I RISC-V Processor">
+          <div class="project-card__bar">
+            <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
+            <span class="wname">rv32i_processor.v</span>
+          </div>
+          <div class="project-card__vis">
+            <svg viewBox="0 0 360 180" xmlns="http://www.w3.org/2000/svg">
+              <rect width="360" height="180" fill="#f3f3f4"/>
+              <pattern id="dp1" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#ccc"/></pattern>
+              <rect width="360" height="180" fill="url(#dp1)"/>
+              <!-- CPU die -->
+              <rect x="70" y="28" width="220" height="124" fill="#fff" stroke="#0a0a0a" stroke-width="2.5"/>
+              <rect x="70" y="28" width="220" height="22" fill="#0a0a0a"/>
+              <text x="180" y="43" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#fff" font-weight="700">RV32I SINGLE-CYCLE CPU</text>
+              <!-- stages -->
+              <rect x="82"  y="62" width="38" height="72" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="1.5"/>
+              <text x="101" y="101" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a" transform="rotate(-90,101,101)">IF</text>
+              <rect x="126" y="62" width="38" height="72" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="1.5"/>
+              <text x="145" y="101" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a" transform="rotate(-90,145,101)">ID</text>
+              <rect x="170" y="62" width="38" height="72" fill="#0a0a0a" stroke="#0a0a0a" stroke-width="1.5"/>
+              <text x="189" y="101" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#fff" transform="rotate(-90,189,101)">EX/ALU</text>
+              <rect x="214" y="62" width="38" height="72" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="1.5"/>
+              <text x="233" y="101" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a" transform="rotate(-90,233,101)">MEM</text>
+              <rect x="258" y="62" width="22" height="72" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="1.5"/>
+              <text x="269" y="101" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a" transform="rotate(-90,269,101)">WB</text>
+              <!-- flow arrows -->
+              <line x1="120" y1="98" x2="126" y2="98" stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="164" y1="98" x2="170" y2="98" stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="208" y1="98" x2="214" y2="98" stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="252" y1="98" x2="258" y2="98" stroke="#0a0a0a" stroke-width="1.5"/>
+              <!-- verified bar -->
+              <rect x="70" y="143" width="220" height="9" fill="#0a0a0a"/>
+              <text x="180" y="150" text-anchor="middle" font-family="Space Mono" font-size="6" fill="#fff">✓ VERIFIED · VIVADO · BASYS3 FPGA</text>
+            </svg>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag">Verilog</span><span class="tag">RISC-V</span><span class="tag">RTL</span><span class="tag">Vivado</span><span class="tag">Basys3</span>
+            </div>
+            <h3 class="project-card__title">RV32I RISC-V Processor</h3>
+            <p class="project-card__desc">Single-cycle RV32I processor — full datapath (IF, ID, EX, MEM, WB), 32-bit ALU, control unit, 32-register file, IMEM &amp; DMEM. Verified with 10-testbench regression suite, synthesized on Basys3 FPGA.</p>
+            <div class="project-card__footer">
+              <a href="https://github.com/ansh07verma/rv32i_cpu" target="_blank" rel="noopener" class="card-btn card-btn--filled" id="p1-github">GitHub ↗</a>
+              <a href="#" class="card-btn" id="p1-details">Details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── 2. CNN Digit Recognizer ───────────────────── -->
+        <article class="project-card" aria-label="CNN Digit Recognizer">
+          <div class="project-card__bar">
+            <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
+            <span class="wname">cnn_rtl.v</span>
+          </div>
+          <div class="project-card__vis">
+            <svg viewBox="0 0 360 180" xmlns="http://www.w3.org/2000/svg">
+              <rect width="360" height="180" fill="#f3f3f4"/>
+              <pattern id="dp2" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#ccc"/></pattern>
+              <rect width="360" height="180" fill="url(#dp2)"/>
+              <!-- input digit -->
+              <rect x="14" y="55" width="28" height="70" fill="#fff" stroke="#0a0a0a" stroke-width="2"/>
+              <text x="28" y="95" text-anchor="middle" font-family="Space Mono" font-size="20" fill="#0a0a0a" font-weight="700">7</text>
+              <!-- layers -->
+              <rect x="56"  y="40" width="36" height="100" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="2"/>
+              <text x="74"  y="95" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a" transform="rotate(-90,74,95)">CONV 5×5</text>
+              <rect x="102" y="48" width="30" height="84"  fill="#e2e2e2" stroke="#0a0a0a" stroke-width="2"/>
+              <text x="117" y="95" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a" transform="rotate(-90,117,95)">MAXPOOL</text>
+              <rect x="142" y="54" width="34" height="72"  fill="#e2e2e2" stroke="#0a0a0a" stroke-width="2"/>
+              <text x="159" y="95" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a" transform="rotate(-90,159,95)">CONV 3×3</text>
+              <rect x="186" y="62" width="30" height="56"  fill="#fff"    stroke="#0a0a0a" stroke-width="2"/>
+              <text x="201" y="95" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#555" transform="rotate(-90,201,95)">MAC FC</text>
+              <!-- output nodes -->
+              <circle cx="268" cy="68"  r="11" fill="#fff" stroke="#0a0a0a" stroke-width="2"/>
+              <circle cx="268" cy="90"  r="11" fill="#fff" stroke="#0a0a0a" stroke-width="2"/>
+              <circle cx="268" cy="112" r="11" fill="#0a0a0a"/>
+              <text x="268" y="116" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#fff" font-weight="700">7</text>
+              <!-- wires -->
+              <line x1="42"  y1="90" x2="56"  y2="90" stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="92"  y1="90" x2="102" y2="90" stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="132" y1="90" x2="142" y2="90" stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="176" y1="90" x2="186" y2="90" stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="216" y1="90" x2="257" y2="90" stroke="#0a0a0a" stroke-width="1.5"/>
+              <!-- label -->
+              <rect x="220" y="148" width="122" height="9" fill="#0a0a0a"/>
+              <text x="281" y="155" text-anchor="middle" font-family="Space Mono" font-size="6" fill="#fff">8-BIT FIXED-POINT · FPGA</text>
+            </svg>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag">Verilog</span><span class="tag">CNN</span><span class="tag">MNIST</span><span class="tag">FPGA</span><span class="tag">RTL</span>
+            </div>
+            <h3 class="project-card__title">CNN Digit Recognizer</h3>
+            <p class="project-card__desc">Hardware RTL CNN pipeline for MNIST inference — Conv 5×5, MaxPool, Conv 3×3, FC layers in Verilog with 8-bit fixed-point MAC units. Verified against NumPy golden reference and synthesized for FPGA.</p>
+            <div class="project-card__footer">
+              <a href="https://github.com/ansh07verma" target="_blank" rel="noopener" class="card-btn card-btn--filled" id="p2-github">GitHub ↗</a>
+              <a href="#" class="card-btn" id="p2-details">Details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── 3. Laser Target Tracking System ──────────── -->
+        <article class="project-card" aria-label="Laser Target Tracking">
+          <div class="project-card__bar">
+            <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
+            <span class="wname">turret_main.c</span>
+          </div>
+          <div class="project-card__vis">
+            <svg viewBox="0 0 360 180" xmlns="http://www.w3.org/2000/svg">
+              <rect width="360" height="180" fill="#f3f3f4"/>
+              <pattern id="dp3" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#ccc"/></pattern>
+              <rect width="360" height="180" fill="url(#dp3)"/>
+              <!-- MCU -->
+              <rect x="118" y="46" width="124" height="88" fill="#fff" stroke="#0a0a0a" stroke-width="2.5"/>
+              <rect x="118" y="46" width="124" height="22" fill="#0a0a0a"/>
+              <text x="180" y="61" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#fff">TI TM4C123GXL</text>
+              <text x="180" y="84" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#555">ARM Cortex-M4</text>
+              <text x="180" y="97" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#555">PWM · I²C · UART</text>
+              <!-- peripherals -->
+              <rect x="16"  y="52" width="66" height="26" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="1.5"/>
+              <text x="49"  y="68" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a">HC-SR04</text>
+              <rect x="16"  y="92" width="66" height="26" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="1.5"/>
+              <text x="49"  y="108" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a">OLED I²C</text>
+              <rect x="278" y="52" width="66" height="26" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="1.5"/>
+              <text x="311" y="68" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a">PAN SERVO</text>
+              <rect x="278" y="92" width="66" height="26" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="1.5"/>
+              <text x="311" y="108" text-anchor="middle" font-family="Space Mono" font-size="7" fill="#0a0a0a">TILT SERVO</text>
+              <!-- wires -->
+              <line x1="82"  y1="65"  x2="118" y2="65"  stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="82"  y1="105" x2="118" y2="105" stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="242" y1="65"  x2="278" y2="65"  stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="242" y1="105" x2="278" y2="105" stroke="#0a0a0a" stroke-width="1.5"/>
+              <!-- result bar -->
+              <rect x="118" y="148" width="124" height="9" fill="#0a0a0a"/>
+              <text x="180" y="155" text-anchor="middle" font-family="Space Mono" font-size="6" fill="#fff">±1cm AUTO-LOCK · 2-AXIS PWM</text>
+            </svg>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag">Embedded C</span><span class="tag">TM4C123</span><span class="tag">PWM</span><span class="tag">I²C</span><span class="tag">UART</span>
+            </div>
+            <h3 class="project-card__title">Laser Target Tracking System</h3>
+            <p class="project-card__desc">Real-time autonomous turret on TI TM4C123GXL — HC-SR04 ultrasonic ranging, 2-axis PWM servo control, I²C OLED feedback, and a proportional control loop achieving ±1cm precision auto-lock.</p>
+            <div class="project-card__footer">
+              <a href="https://github.com/ansh07verma" target="_blank" rel="noopener" class="card-btn card-btn--filled" id="p3-github">GitHub ↗</a>
+              <a href="#" class="card-btn" id="p3-details">Details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── 4. AI Gate-Level Power Prediction ─────────── -->
+        <article class="project-card" aria-label="AI Power Prediction">
+          <div class="project-card__bar">
+            <span class="wdot"></span><span class="wdot"></span><span class="wdot"></span>
+            <span class="wname">gnn_power.py</span>
+          </div>
+          <div class="project-card__vis">
+            <svg viewBox="0 0 360 180" xmlns="http://www.w3.org/2000/svg">
+              <rect width="360" height="180" fill="#f3f3f4"/>
+              <pattern id="dp4" x="0" y="0" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#ccc"/></pattern>
+              <rect width="360" height="180" fill="url(#dp4)"/>
+              <!-- gate nodes -->
+              <circle cx="52"  cy="90"  r="18" fill="#fff" stroke="#0a0a0a" stroke-width="2"/>
+              <text x="52"    cy="94"  y="94" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#0a0a0a">AND</text>
+              <circle cx="138" cy="55"  r="16" fill="#fff" stroke="#0a0a0a" stroke-width="2"/>
+              <text x="138"   cy="59"  y="59" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#0a0a0a">OR</text>
+              <circle cx="138" cy="125" r="16" fill="#fff" stroke="#0a0a0a" stroke-width="2"/>
+              <text x="138"   cy="129" y="129" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#0a0a0a">NOT</text>
+              <circle cx="220" cy="72"  r="16" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="2"/>
+              <text x="220"   cy="76"  y="76" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#0a0a0a">NOR</text>
+              <circle cx="220" cy="118" r="16" fill="#e2e2e2" stroke="#0a0a0a" stroke-width="2"/>
+              <text x="220"   cy="122" y="122" text-anchor="middle" font-family="Space Mono" font-size="8" fill="#0a0a0a">XOR</text>
+              <!-- output -->
+              <circle cx="308" cy="90"  r="22" fill="#0a0a0a"/>
+              <text x="308"   y="87"   text-anchor="middle" font-family="Space Mono" font-size="9"  fill="#fff">P̂</text>
+              <text x="308"   y="100"  text-anchor="middle" font-family="Space Mono" font-size="7"  fill="#aaa">power</text>
+              <!-- edges -->
+              <line x1="70"  y1="82"  x2="122" y2="61"  stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="70"  y1="98"  x2="122" y2="119" stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="154" y1="59"  x2="204" y2="68"  stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="154" y1="121" x2="204" y2="112" stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="236" y1="78"  x2="286" y2="86"  stroke="#0a0a0a" stroke-width="1.5"/>
+              <line x1="236" y1="112" x2="286" y2="94"  stroke="#0a0a0a" stroke-width="1.5"/>
+              <!-- label -->
+              <rect x="60" y="148" width="240" height="9" fill="#0a0a0a"/>
+              <text x="180" y="155" text-anchor="middle" font-family="Space Mono" font-size="6" fill="#fff">GCN/GAT · R²=0.22 · +28% vs RF BASELINE</text>
+            </svg>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__tags">
+              <span class="tag">PyTorch</span><span class="tag">GNN</span><span class="tag">Python</span><span class="tag">GCN/GAT</span><span class="tag">EDA</span>
+            </div>
+            <h3 class="project-card__title">AI Gate-Level Power Prediction</h3>
+            <p class="project-card__desc">GNN pipeline on gate-level circuit DAGs for dynamic power estimation — GCN &amp; GAT in PyTorch Geometric. Outperforms Random Forest baseline: R²=0.22 vs 0.17 (+28%). Full netlist-to-prediction pipeline with SHAP explainability.</p>
+            <div class="project-card__footer">
+              <a href="https://github.com/ansh07verma" target="_blank" rel="noopener" class="card-btn card-btn--filled" id="p4-github">GitHub ↗</a>
+              <a href="#" class="card-btn" id="p4-details">Details →</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.projects__grid -->
+    </div>
+  </section>
+
+
+    <div class="container">
+      <div class="projects__header reveal">
+        <div>
+          <span class="section-label">Selected Work</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
+        <a href="https://github.com/ansh07verma" target="_blank" class="btn btn--outline" id="all-projects-btn">All on GitHub ↗</a>
+      </div>
+      <div class="projects__grid stagger">
+
+        <!-- ── 1. RV32I RISC-V Processor ─────────────────── -->
         <article class="pcard" aria-label="RV32I RISC-V Processor">
           <div class="pcard__bar">
             <div class="pcard__dots"><span></span><span></span><span></span></div>
