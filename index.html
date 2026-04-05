@@ -255,11 +255,180 @@
       <div class="projects__header reveal">
         <div>
           <span class="section-label">Selected Work</span>
-          <h2 class="section-title">More Projects</h2>
+          <h2 class="section-title">Projects</h2>
         </div>
-        <a href="https://github.com/ansh07verma" target="_blank" class="btn btn--outline">All on GitHub ↗</a>
+        <a href="https://github.com/ansh07verma" target="_blank" class="btn btn--outline" id="all-projects-btn">All on GitHub ↗</a>
       </div>
       <div class="projects__grid stagger">
+
+        <!-- ── 1. RV32I RISC-V Processor ─────────────────── -->
+        <article class="pcard" aria-label="RV32I RISC-V Processor">
+          <div class="pcard__bar">
+            <div class="pcard__dots"><span></span><span></span><span></span></div>
+            <span class="pcard__file">rv32i_processor.v</span>
+            <span class="pcard__num">#01</span>
+          </div>
+          <div class="pcard__body">
+            <div class="pcard__top">
+              <div class="pcard__stack">
+                <span class="tag">Verilog</span>
+                <span class="tag">RISC-V</span>
+                <span class="tag">RTL</span>
+                <span class="tag">Vivado</span>
+                <span class="tag">Basys3</span>
+              </div>
+              <h3 class="pcard__title">RV32I RISC-V<br>Processor</h3>
+              <p class="pcard__desc">
+                Fully functional single-cycle RV32I processor implementing the base integer ISA from scratch — Harvard architecture with complete datapath and control.
+              </p>
+            </div>
+            <ul class="pcard__bullets">
+              <li>Designed single-cycle processor datapath in Verilog (IF, ID, EX, MEM, WB stages)</li>
+              <li>Implemented 32-bit ALU supporting ADD, SUB, AND, OR, XOR, SLT, SLL, SRL, SRA</li>
+              <li>Built instruction decoder and main control unit for all RV32I instruction types (R, I, S, B, U, J)</li>
+              <li>Designed 32-register file with dual-read, single-write ports; implemented IMEM and DMEM</li>
+              <li>Verified 37-instruction coverage using 10-testbench regression suite with waveform analysis</li>
+              <li>Synthesized and deployed on Digilent Basys3 FPGA via Xilinx Vivado toolchain</li>
+            </ul>
+            <div class="pcard__metrics">
+              <div class="pcard__metric"><span class="pm-n">37</span><span class="pm-l">Instructions</span></div>
+              <div class="pcard__metric"><span class="pm-n">10</span><span class="pm-l">Testbenches</span></div>
+              <div class="pcard__metric"><span class="pm-n">12k</span><span class="pm-l">Lines RTL</span></div>
+            </div>
+            <div class="pcard__footer">
+              <a href="https://github.com/ansh07verma/rv32i_cpu" target="_blank" rel="noopener" class="pcard-btn pcard-btn--fill" id="p1-github">GitHub ↗</a>
+              <a href="#" class="pcard-btn" id="p1-details">View Details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── 2. CNN Digit Recognizer ───────────────────── -->
+        <article class="pcard" aria-label="CNN Digit Recognizer">
+          <div class="pcard__bar">
+            <div class="pcard__dots"><span></span><span></span><span></span></div>
+            <span class="pcard__file">cnn_rtl.v</span>
+            <span class="pcard__num">#02</span>
+          </div>
+          <div class="pcard__body">
+            <div class="pcard__top">
+              <div class="pcard__stack">
+                <span class="tag">Verilog</span>
+                <span class="tag">CNN</span>
+                <span class="tag">MNIST</span>
+                <span class="tag">FPGA</span>
+                <span class="tag">RTL</span>
+              </div>
+              <h3 class="pcard__title">CNN Digit<br>Recognizer</h3>
+              <p class="pcard__desc">
+                Hardware implementation of a convolutional neural network for MNIST digit recognition — full RTL pipeline performing inference directly on FPGA.
+              </p>
+            </div>
+            <ul class="pcard__bullets">
+              <li>Implemented full CNN in hardware RTL — Conv 5×5, MaxPool, Conv 3×3, FC×128 layers in Verilog</li>
+              <li>Designed fixed-point arithmetic units for multiply-accumulate (MAC) operations at gate level</li>
+              <li>Built pipelined datapath for parallel layer execution, reducing inference latency</li>
+              <li>Quantized weights to 8-bit fixed-point to optimize FPGA LUT and BRAM resource usage</li>
+              <li>Verified forward-pass inference against Python/NumPy golden reference using testbenches</li>
+              <li>Synthesized for Xilinx FPGA; analyzed timing reports and resource utilization</li>
+            </ul>
+            <div class="pcard__metrics">
+              <div class="pcard__metric"><span class="pm-n">4</span><span class="pm-l">RTL Layers</span></div>
+              <div class="pcard__metric"><span class="pm-n">8-bit</span><span class="pm-l">Fixed Point</span></div>
+              <div class="pcard__metric"><span class="pm-n">FPGA</span><span class="pm-l">Deployed</span></div>
+            </div>
+            <div class="pcard__footer">
+              <a href="https://github.com/ansh07verma" target="_blank" rel="noopener" class="pcard-btn pcard-btn--fill" id="p2-github">GitHub ↗</a>
+              <a href="#" class="pcard-btn" id="p2-details">View Details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── 3. Laser Target Tracking System ──────────── -->
+        <article class="pcard" aria-label="Laser Target Tracking">
+          <div class="pcard__bar">
+            <div class="pcard__dots"><span></span><span></span><span></span></div>
+            <span class="pcard__file">turret_main.c</span>
+            <span class="pcard__num">#03</span>
+          </div>
+          <div class="pcard__body">
+            <div class="pcard__top">
+              <div class="pcard__stack">
+                <span class="tag">Embedded C</span>
+                <span class="tag">TM4C123</span>
+                <span class="tag">PWM</span>
+                <span class="tag">I²C</span>
+                <span class="tag">UART</span>
+              </div>
+              <h3 class="pcard__title">Laser Target<br>Tracking System</h3>
+              <p class="pcard__desc">
+                Real-time autonomous laser turret on TI TM4C123GXL — integrates ultrasonic ranging with PWM servo control for ±1cm precision auto-lock targeting.
+              </p>
+            </div>
+            <ul class="pcard__bullets">
+              <li>Implemented real-time distance measurement using HC-SR04 ultrasonic sensor with interrupt-driven timing</li>
+              <li>Programmed PWM-based pan-tilt servo control loop for 2-axis azimuth and elevation targeting</li>
+              <li>Integrated OLED display (SSD1306) via I²C for live distance and targeting status feedback</li>
+              <li>Wrote proportional control algorithm for smooth, ±1cm precision target lock and tracking</li>
+              <li>Designed bare-metal firmware in Embedded C on TI TM4C123GXL ARM Cortex-M4 MCU</li>
+              <li>Handled UART debug telemetry for real-time sensor data streaming and system diagnostics</li>
+            </ul>
+            <div class="pcard__metrics">
+              <div class="pcard__metric"><span class="pm-n">±1cm</span><span class="pm-l">Precision</span></div>
+              <div class="pcard__metric"><span class="pm-n">2-axis</span><span class="pm-l">Control</span></div>
+              <div class="pcard__metric"><span class="pm-n">M4</span><span class="pm-l">Cortex-M4</span></div>
+            </div>
+            <div class="pcard__footer">
+              <a href="https://github.com/ansh07verma" target="_blank" rel="noopener" class="pcard-btn pcard-btn--fill" id="p3-github">GitHub ↗</a>
+              <a href="#" class="pcard-btn" id="p3-details">View Details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── 4. AI Power Prediction (VLSI) ────────────── -->
+        <article class="pcard" aria-label="AI Power Prediction">
+          <div class="pcard__bar">
+            <div class="pcard__dots"><span></span><span></span><span></span></div>
+            <span class="pcard__file">gnn_power.py</span>
+            <span class="pcard__num">#04</span>
+          </div>
+          <div class="pcard__body">
+            <div class="pcard__top">
+              <div class="pcard__stack">
+                <span class="tag">PyTorch</span>
+                <span class="tag">GNN</span>
+                <span class="tag">Python</span>
+                <span class="tag">GCN/GAT</span>
+                <span class="tag">EDA</span>
+              </div>
+              <h3 class="pcard__title">AI Gate-Level<br>Power Prediction</h3>
+              <p class="pcard__desc">
+                ML pipeline to estimate dynamic power consumption at gate level — using Graph Neural Networks on circuit DAGs to outperform traditional estimation methods.
+              </p>
+            </div>
+            <ul class="pcard__bullets">
+              <li>Modeled gate-level netlists as directed acyclic graphs (DAGs) with node features (fanin, logic depth, gate type)</li>
+              <li>Implemented GCN and GAT architectures in PyTorch Geometric for circuit graph learning</li>
+              <li>Built full prediction pipeline: netlist parsing → feature extraction → GNN training → power estimation</li>
+              <li>Outperformed Random Forest baseline: R²=0.2169 vs 0.1687 (28% improvement)</li>
+              <li>Applied SHAP explainability to identify which circuit features drive power most significantly</li>
+              <li>Generated 2,000 synthetic gate-level circuit DAGs with annotated dynamic power labels</li>
+            </ul>
+            <div class="pcard__metrics">
+              <div class="pcard__metric"><span class="pm-n">R²·22</span><span class="pm-l">Best Score</span></div>
+              <div class="pcard__metric"><span class="pm-n">+28%</span><span class="pm-l">vs Baseline</span></div>
+              <div class="pcard__metric"><span class="pm-n">2k</span><span class="pm-l">Circuits</span></div>
+            </div>
+            <div class="pcard__footer">
+              <a href="https://github.com/ansh07verma" target="_blank" rel="noopener" class="pcard-btn pcard-btn--fill" id="p4-github">GitHub ↗</a>
+              <a href="#" class="pcard-btn" id="p4-details">View Details →</a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.projects__grid -->
+    </div>
+  </section>
+
 
         <!-- CNN Digit Recognizer -->
         <article class="project-card" aria-label="CNN Digit Recognizer">
