@@ -328,84 +328,51 @@ body::after {
   transition: color var(--ease);
 }
 
-/* ══ RETRO MONITOR ══════════════════════════════════════════ */
+/* ══ TERMINAL BOX ═══════════════════════════════════════════ */
 .hero__visual {
   position: relative;
   display: flex; flex-direction: column; align-items: center;
   padding-bottom: 16px;
 }
-.retro-monitor {
-  display: flex; flex-direction: column; align-items: center;
-  width: 100%; max-width: 380px;
-}
-.retro-monitor__bezel {
-  width: 100%;
-  background: var(--ink);
+.terminal-box {
+  width: 100%; max-width: 420px;
   border: var(--border-heavy);
   box-shadow: var(--shadow-lg);
-  padding: 12px 12px 8px;
-  position: relative;
-}
-/* corner screws */
-.retro-monitor__bezel::before,
-.retro-monitor__bezel::after {
-  content: '+';
-  position: absolute;
-  font-family: var(--font-m);
-  font-size: 10px;
-  color: #333;
-  line-height: 1;
-}
-.retro-monitor__bezel::before { top: 5px; left: 8px; }
-.retro-monitor__bezel::after  { top: 5px; right: 8px; }
-.retro-monitor__screen {
-  background: #0d1008;
-  border: 2px solid #222;
-  min-height: 220px;
-  padding: 16px 14px;
-  position: relative;
+  background: var(--ink);
   overflow: hidden;
+}
+.terminal-box__bar {
+  background: var(--surface-3);
+  border-bottom: var(--border);
+  padding: 8px 14px;
+  display: flex; align-items: center; gap: 7px;
+}
+.terminal-box__title {
+  font-family: var(--font-m); font-size: 0.6rem;
+  color: var(--ink-muted); margin-left: 6px;
+  letter-spacing: 0.06em;
+}
+.terminal-box__screen {
+  padding: 20px 18px;
+  min-height: 240px;
   display: flex; flex-direction: column;
 }
-.retro-monitor__scanlines {
-  position: absolute; inset: 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0px,
-    transparent 3px,
-    rgba(0,0,0,0.18) 3px,
-    rgba(0,0,0,0.18) 4px
-  );
-  pointer-events: none; z-index: 2;
-}
-.retro-monitor__content {
+.terminal-box__content {
   font-family: var(--font-m);
   font-size: 0.68rem;
   line-height: 1.7;
-  color: #a8ff78;
-  position: relative; z-index: 1;
+  color: rgba(255,255,255,0.85);
   flex: 1;
   white-space: pre;
 }
 .retro-cursor {
   font-family: var(--font-m);
   font-size: 0.68rem;
-  color: #a8ff78;
+  color: rgba(255,255,255,0.85);
   animation: blink 1s step-end infinite;
-  z-index: 1;
-  position: relative;
 }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-.retro-monitor__neck {
-  width: 48px; height: 24px;
-  background: var(--ink);
-  border-left: var(--border); border-right: var(--border); border-bottom: var(--border);
-}
-.retro-monitor__stand {
-  width: 130px; height: 12px;
-  background: var(--ink);
-  border: var(--border);
-}
+
 
 /* ══ FLOATING IC CHIPS ══════════════════════════════════════ */
 @keyframes chipFloat {
