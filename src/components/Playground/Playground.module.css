@@ -1,0 +1,401 @@
+.playground {
+  padding: 88px 0;
+  border-bottom: var(--border-heavy);
+  position: relative;
+  overflow: hidden;
+}
+.pixelDeco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatDeco 6s ease-in-out infinite;
+  font-family: monospace;
+  opacity: 0.3;
+}
+@keyframes floatDeco {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+  25% { transform: translateY(-12px) rotate(5deg); opacity: 0.5; }
+  50% { transform: translateY(-6px) rotate(-3deg); opacity: 0.4; }
+  75% { transform: translateY(-18px) rotate(8deg); opacity: 0.6; }
+}
+.playgroundLabel {
+  font-family: var(--font-d);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pastel-mint);
+  border-bottom: 2px solid var(--pastel-mint);
+  padding-bottom: 6px;
+  margin-bottom: 24px;
+  display: inline-block;
+  font-weight: 400;
+}
+
+/* ── LAYOUT ────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 20px;
+  margin: 32px auto 0;
+  max-width: 780px;
+  border: 3px solid var(--pastel-mint);
+  box-shadow: 6px 6px 0 var(--pastel-mint);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+/* ── VISUALIZATION PANEL ───────────────────────── */
+.vizPanel {
+  padding: 20px;
+}
+
+/* ── GATE SELECTOR ─────────────────────────────── */
+.gateSelector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.gateBtn {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border: 2px solid var(--pastel-green);
+  background: var(--surface);
+  color: var(--pastel-green);
+  cursor: pointer;
+  transition: all var(--ease);
+  box-shadow: 3px 3px 0 rgba(92,255,138,0.3);
+}
+.gateBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 rgba(92,255,138,0.4);
+}
+.gateBtnActive {
+  background: var(--pastel-green);
+  color: var(--surface);
+  border-color: var(--pastel-green);
+}
+.gateBtn:nth-child(1):hover { background: var(--pastel-pink); border-color: var(--pastel-pink); color: var(--surface); }
+.gateBtn:nth-child(2):hover { background: var(--pastel-blue); border-color: var(--pastel-blue); color: var(--surface); }
+.gateBtn:nth-child(3):hover { background: var(--pastel-green); border-color: var(--pastel-green); color: var(--surface); }
+.gateBtn:nth-child(4):hover { background: var(--pastel-yellow); border-color: var(--pastel-yellow); color: var(--surface); }
+.gateBtn:nth-child(5):hover { background: var(--pastel-purple); border-color: var(--pastel-purple); color: var(--surface); }
+.gateBtn:nth-child(6):hover { background: var(--pastel-peach); border-color: var(--pastel-peach); color: var(--surface); }
+
+/* ── SIGNAL FLOW ───────────────────────────────── */
+.signalFlow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 0;
+}
+
+/* ── INPUT STACK (A above B) ───────────────────── */
+.inputStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.inputGroup, .outputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 72px;
+}
+.inputLabel, .outputLabel {
+  font-family: var(--font-d);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pastel-mint);
+}
+
+/* ── TOGGLE SWITCH ─────────────────────────────── */
+.toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.toggleTrack {
+  width: 38px;
+  height: 22px;
+  border: 2px solid var(--pastel-green);
+  background: var(--surface-3);
+  position: relative;
+  transition: background var(--ease);
+  box-shadow: 2px 2px 0 rgba(92,255,138,0.2);
+}
+.toggleOn .toggleTrack {
+  background: var(--pastel-green);
+  box-shadow: 3px 3px 0 rgba(92,255,138,0.4);
+}
+.toggleThumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  background: var(--ink);
+  transition: transform var(--ease);
+}
+.toggleOn .toggleThumb {
+  transform: translateX(16px);
+  background: var(--surface);
+}
+.toggleValue {
+  font-family: var(--font-d);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--pastel-green);
+}
+
+/* ── GATE BOX ──────────────────────────────────── */
+.gateBox {
+  flex: 1;
+  max-width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gateBox svg {
+  width: 100%;
+  height: auto;
+}
+
+/* ── OUTPUT LED ────────────────────────────────── */
+.led {
+  width: 34px;
+  height: 34px;
+  border: 2px solid var(--pastel-green);
+  border-radius: 0;
+  background: var(--surface-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--ease);
+  box-shadow: 2px 2px 0 rgba(92,255,138,0.2);
+}
+.ledOn {
+  background: var(--pastel-green);
+  box-shadow: 3px 3px 0 rgba(92,255,138,0.4), 0 0 20px rgba(92,255,138,0.5);
+}
+.ledBulb {
+  width: 16px;
+  height: 16px;
+  border-radius: 0;
+  background: var(--surface-3);
+  transition: all var(--ease);
+}
+.ledOn .ledBulb {
+  background: #2a7a2a;
+}
+.outputValue {
+  font-family: var(--font-d);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--pastel-green);
+}
+
+/* ── TRUTH TABLE PANEL ─────────────────────────── */
+.tablePanel {
+  border-left: 3px solid var(--pastel-mint);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+}
+.tableHeader {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  background: var(--pastel-pink);
+  color: var(--surface);
+  text-align: center;
+}
+.table {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.tableRow {
+  display: flex;
+  border-bottom: 2px solid var(--surface-3);
+  transition: background var(--ease);
+}
+.tableRow:last-child {
+  border-bottom: none;
+}
+.tableHeadRow {
+  background: var(--surface-3);
+}
+.tableHeadRow .tableCell {
+  font-family: var(--font-d);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pastel-blue);
+}
+.tableRowActive {
+  background: rgba(92,255,138,0.15);
+  border: 2px solid var(--pastel-green);
+}
+.tableCell {
+  flex: 1;
+  padding: 8px 6px;
+  text-align: center;
+  font-family: var(--font-d);
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-right: 2px solid var(--surface-3);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tableCell:last-child {
+  border-right: none;
+}
+.tableCellOutput {
+  background: var(--surface-3);
+  font-weight: 700;
+  color: var(--pastel-green);
+}
+.tableRowActive .tableCellOutput {
+  background: rgba(92,255,138,0.2);
+}
+
+/* ── FORMULA ───────────────────────────────────── */
+.tableFormula {
+  font-family: var(--font-m);
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  background: var(--pastel-blue);
+  color: var(--surface);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+/* ── RESPONSIVE ────────────────────────────────── */
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+    max-width: none;
+    margin: 32px 0 0;
+  }
+  .timingBox {
+    max-width: none;
+    margin: 20px 0 0;
+  }
+  .tablePanel {
+    border-left: none;
+    border-top: 3px solid var(--pastel-mint);
+  }
+  .signalFlow {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .gateSelector {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ── TIMING DIAGRAM ─────────────────────────────── */
+.timingBox {
+  margin: 20px auto 0;
+  max-width: 780px;
+  border: 3px solid var(--pastel-yellow);
+  box-shadow: 6px 6px 0 rgba(255,224,102,0.2);
+  background: var(--surface);
+  overflow: hidden;
+}
+.timingHeader {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  background: var(--pastel-yellow);
+  color: var(--surface);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timingWrap {
+  display: flex;
+  justify-content: center;
+  padding: 12px 10px;
+  overflow-x: auto;
+}
+.timingSvg {
+  display: block;
+}
+.timingLabel {
+  font-family: var(--font-d);
+  font-size: 10px;
+  font-weight: 700;
+  fill: var(--pastel-yellow);
+}
+.timingHigh {
+  stroke: var(--pastel-green);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: square;
+}
+.timingLow {
+  stroke: var(--ink-muted);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: square;
+  opacity: 0.5;
+}
+.timingTransition {
+  stroke: var(--pastel-yellow);
+  stroke-width: 2;
+  fill: none;
+  opacity: 0.4;
+}
+.timingGridLine {
+  stroke: var(--ink-muted);
+  stroke-width: 1;
+  opacity: 0.1;
+  stroke-dasharray: 4 4;
+}
+
+/* ── TIMING RESET BUTTON ──────────────────────── */
+.timingResetBtn {
+  font-family: var(--font-ui);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border: 2px solid var(--pastel-pink);
+  background: transparent;
+  color: var(--pastel-pink);
+  cursor: pointer;
+  transition: all var(--ease);
+  margin-left: 10px;
+}
+.timingResetBtn:hover {
+  border-color: var(--pastel-pink);
+  color: var(--surface);
+  background: var(--pastel-pink);
+}

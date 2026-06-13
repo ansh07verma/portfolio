@@ -1,10 +1,22 @@
 {
   "name": "portfolio",
+  "private": true,
   "version": "1.0.0",
-  "description": "Ansh Verma's portfolio website",
+  "type": "module",
   "scripts": {
-    "dev": "pwsh -ExecutionPolicy Bypass -File watch-and-push.ps1",
-    "preview": "npx browser-sync start --server --port 3000 --files \"*.html,*.css,*.js\" --no-notify"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "private": true
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.1",
+    "@vitejs/plugin-react": "^4.5.2",
+    "tailwindcss": "^4.3.1",
+    "vite": "^6.3.5"
+  }
 }

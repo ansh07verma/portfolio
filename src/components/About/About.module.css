@@ -1,0 +1,160 @@
+.about {
+  padding: 88px 0;
+  border-bottom: var(--border-heavy);
+  background: linear-gradient(to bottom, rgba(186,225,255,0.15), rgba(186,225,255,0.05));
+  position: relative;
+  overflow: hidden;
+}
+.pixelDeco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatDeco 6s ease-in-out infinite;
+  font-family: monospace;
+  opacity: 0.3;
+}
+@keyframes floatDeco {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
+  25% { transform: translateY(-12px) rotate(5deg); opacity: 0.5; }
+  50% { transform: translateY(-6px) rotate(-3deg); opacity: 0.4; }
+  75% { transform: translateY(-18px) rotate(8deg); opacity: 0.6; }
+}
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 56px;
+  align-items: start;
+}
+.para {
+  font-family: var(--font-m);
+  font-size: 1.2rem;
+  color: var(--ink-muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  max-width: 560px;
+}
+.para strong { color: var(--ink); }
+.facts {
+  margin-top: 28px;
+  border: var(--border);
+  box-shadow: var(--shadow);
+}
+.fact {
+  display: flex;
+  border-bottom: var(--border);
+  transition: background var(--ease);
+}
+.fact:last-child { border-bottom: none; }
+.fact:nth-child(1):hover { background: #8a6abf; }
+.fact:nth-child(2):hover { background: #3a8ab5; }
+.fact:nth-child(3):hover { background: #3aaa6a; }
+.factK {
+  font-family: var(--font-d);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--surface-3);
+  border-right: var(--border);
+  padding: 12px 14px;
+  min-width: 110px;
+  display: flex;
+  align-items: center;
+  transition: all var(--ease);
+}
+.fact:nth-child(1):hover .factK { background: #e05a8a; color: #fff; }
+.fact:nth-child(2):hover .factK { background: #d4a030; color: #fff; }
+.fact:nth-child(3):hover .factK { background: #d47a30; color: #fff; }
+.fact:hover .factV { color: #fff; }
+.factV {
+  font-family: var(--font-m);
+  font-size: 1rem;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  color: var(--ink-2);
+}
+
+.aboutLabel {
+  font-family: var(--font-d);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 2px solid #000;
+  padding-bottom: 6px;
+  margin-bottom: 24px;
+  display: inline-block;
+  font-weight: 400;
+}
+.labSvg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+@keyframes ledBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+.ledBlink {
+  animation: ledBlink 1.8s ease-in-out infinite;
+}
+
+/* ── INTERESTS ────────────────────────────────── */
+.interests {
+  margin-top: 24px;
+}
+.interestsLabel {
+  font-family: var(--font-d);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-muted);
+  display: block;
+  margin-bottom: 12px;
+}
+.interestsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.interest {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 2px solid var(--ink);
+  background: var(--bg);
+  transition: all var(--ease);
+  cursor: default;
+}
+.interest:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow);
+}
+.interest:nth-child(1):hover { background: var(--pastel-pink); }
+.interest:nth-child(2):hover { background: var(--pastel-blue); }
+.interest:nth-child(3):hover { background: var(--pastel-green); }
+.interest:nth-child(4):hover { background: var(--pastel-yellow); }
+.interest:nth-child(5):hover { background: var(--pastel-purple); }
+.interest:nth-child(6):hover { background: var(--pastel-peach); }
+.interestIcon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.interestLabel {
+  font-family: var(--font-d);
+  font-size: 0.55rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 860px) {
+  .inner { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 480px) {
+  .interestsGrid { grid-template-columns: repeat(2, 1fr); }
+}
