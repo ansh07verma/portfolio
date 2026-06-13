@@ -231,7 +231,6 @@ export default function Featured() {
                 <li><span className={styles.metricN}>+0.153</span><span className={styles.metricL}>WNS (ns)</span></li>
               </ul>
               <div className={styles.actions}>
-                <a href="https://github.com/ansh07verma/fpga-mini-npu" target="_blank" rel="noopener" className="btn btn--primary">GitHub ↗</a>
                 <button className="btn btn--outline" onClick={() => setShowModal(true)}>Case Study →</button>
               </div>
             </div>
